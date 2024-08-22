@@ -1,0 +1,259 @@
+@import url('../variables.css');
+
+/*-----------------------------------*\
+    #HERO
+  \*-----------------------------------*/
+
+.hero {
+    min-height: 100vh !important;
+    position: relative;
+    background-color: black;
+    padding-block-start: calc(var(--section-padding) + 50px);
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 50px;
+}
+
+.hero-subtitle {
+    color: var(--go-green);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-500);
+    max-width: max-content;
+    margin-inline: auto;
+    z-index: 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero-subtitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background-color: var(--go-green);
+}
+
+.hero-title {
+    margin-block: 10px 15px;
+    color: #333;
+}
+
+.hero-text {
+    color: #666;
+}
+
+.hero .btn-group {
+    margin-block-start: 40px;
+}
+
+.hero-cta {
+    border-radius: 30px;
+    border: none;
+    color: #f2f2f2;
+    padding: 15px 40px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: 300ms;
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    background-color: #19222f;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta:active {
+    transform: translateY(2px);
+}
+
+.hero-cta img {
+    width: 30px;
+    margin-right: 15px;
+    transition: 300ms;
+}
+
+.hero-cta:active img {
+    transform: translateY(-5px);
+}
+
+.hero .btn-icon {
+    background-color: var(--go-green);
+    color: var(--white);
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--go-green);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px transparent;
+    }
+}
+
+.hero .flex-btn .span {
+    color: var(--go-green);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-600);
+}
+
+.section.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/starry-night-3.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 25%;
+}
+
+.astronaut-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.astronaut-element {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    width: 200px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.blob svg {
+    position: absolute;
+    top: -600px;
+    left: -550px;
+    width: 2000px;
+    transform: rotate(85deg);
+}
+
+.curve {
+    position: absolute;
+    width: 100%;
+    height: 225px;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #f2f2f2;
+    transform: translate(82%, 62%);
+    z-index: 2;
+}
+
+.curve::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #1a1a1a;
+    transform: translate(-5%, 38%);
+    z-index: 1;
+}
+
+@media (max-width: 574px) {
+    .section.hero {
+        padding: 130px 20px 20px 20px;
+    }
+
+    .hero-subtitle {
+        padding: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-banner {
+        display: none;
+    }
+
+    .hero-subtitle::before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        --fs-12: 1.4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        text-align: left;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr 0.7fr;
+        align-items: center;
+    }
+
+    .hero-subtitle {
+        margin-inline: 0;
+    }
+
+    .hero .btn-group {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+    }
+}
+
+#wormhole {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: brightness(20%) blur(0px);
+}

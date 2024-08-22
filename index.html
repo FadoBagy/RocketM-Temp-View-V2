@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RocketM offers comprehensive digital marketing services including SEO, PPC, and social media marketing. Grow your business with our expert team.">
+    <title>RocketM - Expert Digital Marketing Services for Business Growth</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/sections/header.css" />
+    <link rel="stylesheet" href="./styles/sections/hero.css" />
+    <link rel="stylesheet" href="./styles/sections/about.css" />
+    <link rel="stylesheet" href="./styles/sections/services.css" />
+    <link rel="stylesheet" href="./styles/sections/footer.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="importmap">
+        {
+                  "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js", 
+                    "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+            }
+              }
+      </script>
+</head>
+
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="./img/33bqlo.svg" width="240" alt="RocketM Digital Marketing Logo">
+            </a>
+
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="#home" class="logo"><img src="./img/33bqlo2.svg" width="150" alt="RocketM Logo Small"></a>
+
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#home" id="nav-link" class="navbar-link" data-nav-link>Начало</a>
+                    </li>
+                    <li>
+                        <a href="#about" id="nav-link" class="navbar-link" data-nav-link>За нас</a>
+                    </li>
+                    <li>
+                        <a href="#services" id="nav-link" class="navbar-link" data-nav-link>Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#features" id="nav-link" class="navbar-link" data-nav-link>Качества</a>
+                    </li>
+                    <li>
+                        <a href="#footer" id="nav-link" class="navbar-link" data-nav-link>Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+            <a href="#footer" class="btn-outline">Да поговорим</a>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- #HERO -->
+        <section class="section hero" id="home" aria-label="hero">
+            <div id="wormhole"></div>
+            <div class="astronaut-container" data-aos="fade-left" data-aos-delay="300">
+                <img src="./img/astronaut.png" alt="Astronaut" class="astronaut-element" id="astronautElement">
+            </div>
+            <div class="blob" data-aos="fade-right" data-aos-delay="50">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f2f2f2;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e4e4e4;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#gradient1)" transform="translate(100 100)">
+                        <animate attributeName="d" dur="4s" repeatCount="indefinite" values="
+                            M35.8,-57.3C47.1,-48.4,57.5,-39.7,56,-29.5C54.4,-19.3,41,-7.7,39.3,5.8C37.6,19.3,47.6,34.6,46.7,46.5C45.8,58.4,34,66.9,21.3,68.9C8.7,70.9,-4.8,66.4,-20,63.9C-35.3,61.4,-52.3,60.7,-54.2,51.1C-56,41.5,-42.7,22.9,-38.2,9.6C-33.7,-3.6,-37.9,-11.4,-40.3,-23.4C-42.7,-35.4,-43.1,-51.6,-36.1,-62.4C-29,-73.3,-14.5,-78.8,-1.1,-77C12.2,-75.2,24.5,-66.1,35.8,-57.3Z;
+
+                            M35.8,-57.3C47.1,-48.8,58.5,-40,56,-30.5C54.4,-20,41,-7.7,39.9,1.8C37.6,10.3,47.6,40,46.7,46.5C45.8,60.4,34,66.9,21.3,68.9C8.7,70.9,-4.8,66.4,-20,63.9C-35.3,61.4,-52.3,60.7,-54.2,51.1C-56,41.5,-42.7,22.9,-38.2,9.6C-33.7,-3.6,-37.9,-11.4,-40.3,-23.4C-42.7,-35.4,-43.1,-51.6,-36.1,-62.4C-29,-74.3,-14.5,-79.8,-1.1,-78C19.2,-75.9,24.5,-66.1,35.8,-57.3Z;
+                            
+                            M35.8,-57.3C47.1,-48.4,57.5,-39.7,56,-29.5C54.4,-19.3,41,-7.7,39.3,5.8C37.6,19.3,47.6,34.6,46.7,46.5C45.8,58.4,34,66.9,21.3,68.9C8.7,70.9,-4.8,66.4,-20,63.9C-35.3,61.4,-52.3,60.7,-54.2,51.1C-56,41.5,-42.7,22.9,-38.2,9.6C-33.7,-3.6,-37.9,-11.4,-40.3,-23.4C-42.7,-35.4,-43.1,-51.6,-36.1,-62.4C-29,-73.3,-14.5,-78.8,-1.1,-77C12.2,-75.2,24.5,-66.1,35.8,-57.3Z;
+                            ">
+                        </animate>
+                    </path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-subtitle has-before" data-aos="fade-right" data-aos-delay="100">
+                        Издигнете бизнеса си до нови висоти
+                    </p>
+                    <h1 class="h1 hero-title" data-aos="fade-right" data-aos-delay="150">
+                        Повече продажби с по-малко усилия
+                    </h1>
+                    <p class="hero-text" data-aos="fade-right" data-aos-delay="200">
+                        Ние ви помагаме да изградите успешна онлайн стратегия за да достиганете до вашата целева
+                        аудитория и да увеличите значително продажбите си
+                    </p>
+                    <div class="btn-group" data-aos="fade-right" data-aos-delay="300">
+                        <a id="hero-cta" class="btn btn-primary hero-cta">
+                            <img src="./img/rocket.png" alt="Rocket">
+                            <p>Научи повече</p>
+                        </a>
+                        <!-- <a href="tel:+359877221162" class="flex-btn">
+                            <div class="btn-icon">
+                                <ion-icon name="call" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                            </div>
+                            <span class="span">
+                                Свържи се с нас
+                            </span>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="spacer layer-bott-black" data-aos="fade-up" data-aos-delay="300"></div>
+        </section>
+
+        <!-- #ABOUT -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="about-images">
+                    <img src="./img/elements/blob-border.png" class="about-images-blob">
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="100">
+                        <img src="./img/elements/planets/planet_1.png" id="planet_1" class="about-planet">
+                    </div>
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="100">
+                        <img src="./img/elements/planets/planet_2.png" id="planet_2" class="about-planet">
+                    </div>
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="250">
+                        <img src="./img/elements/planets/planet_3.png" id="planet_3" class="about-planet">
+                    </div>
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="150">
+                        <img src="./img/elements/planets/planet_4.png" id="planet_4" class="about-planet">
+                    </div>
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="150">
+                        <img src="./img/elements/planets/planet_5.png" id="planet_5" class="about-planet">
+                    </div>
+                    <div class="about-planet-container" data-aos="fade-right" data-aos-delay="200">
+                        <img src="./img/elements/planets/planet_6.png" id="planet_6" class="about-planet">
+                    </div>
+                </div>
+                <div class="about-text-section">
+                    <div>
+                        <h2 class="about-headline" data-aos="fade-up" data-aos-delay="50">
+                            Достигнете нови висоти
+                        </h2>
+                        <h3 class="about-subheadline" data-aos="fade-up" data-aos-delay="100">
+                            Персонализирани решения, изключителни резултати
+                        </h3>
+                    </div>
+                    <div class="about-text-wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <p class="about-text">
+                            В нашата агенция използваме дългогодишен опит и експертиза, затова нашата мисия е ясна: да
+                            помагаме на
+                            малки и средни бизнеси да
+                            постигнат мечтаните цели за продажби. Ние се ангажираме да предоставяме резултати
+                            - без значение какво ни коства.
+                        </p>
+                        <p class="about-text">
+                            Нашият подход съчетава бързо и качествено изпълнение на
+                            услугите,
+                            което гарантира, че ще получите висококачествена работа бързо и ефективно. Никога няма да
+                            останете на тъмно, тъй като ние поддържаме 24/7 комуникация, за да ви държим информирани на
+                            всяка стъпка от пътя.
+                        </p>
+                        <p class="about-text">
+                            Ако вашите очаквания и резултати не съвпадат, имате свободата да поискате пълна ревизия без
+                            допълнителни разходи или да изберете 100% възстановяване на сумата – без въпроси. Нашият
+                            приоритет е вашият успех и ние сме посветени да го направим.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="curve"></div> -->
+            <div class="spacer layer-bott-white"></div>
+        </section>
+
+        <!-- #SERVICES -->
+        <section class="services" id="services">
+            <h2 data-aos="fade-up" data-aos-delay="100">
+                Our Services
+            </h2>
+            <div class="services-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 1">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Customized strategies to boost your online presence and drive sales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 2">
+                            <h3>
+                                Brand Identity
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Build a strong, recognizable brand that resonates with your audience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/web-dev-icon.png" alt="Service Icon 3">
+                            <h3>
+                                Web Development
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Marketing Strategy
+                            </h3>
+                            <p>
+                                Full-service website creation to showcase your brand online.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width: 100%; height: 700px; position: relative; background-color: #1a1a1a;">
+            <div class="spacer layer-top-white"></div>
+        </section>
+
+        <!-- #FOOTER -->
+        <footer id="footer" class="footer">
+            <div class="footer-top section">
+                <div class="container">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="./img/33bqlo.svg" alt="">
+                        </a>
+                        <div class="footer-text">
+                            <p>
+                                Повече клиенти и продажби с по-малко усилия
+                            </p>
+                            <form name="submit-to-google-sheet" action="" class="newsletter-form">
+                                <input type="email" name="Email" placeholder="Напиши си имейла" required
+                                    class="email-field">
+                                <button type="submit" class="form-btn">
+                                    <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
+                                </button>
+                            </form>
+                            <div id="successAlert" class="alert success" style="display:none;">
+                                Вие се свързахте с нас успешно!
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Свържете се с нас</p>
+
+                        </li>
+                        <li class="footer-item">
+                            <ion-icon name="location" aria-hidden="true"></ion-icon>
+                            <address class="contact-link address">
+                                ул. Алесксандровска 6, гр. Русе
+                            </address>
+                        </li>
+                        <li class="footer-item">
+                            <ion-icon name="call" aria-hidden="true"></ion-icon>
+                            <a href="tel: +359 877221162" class="contact-link allow-select">
+                                +359 877 221 162
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                            <a href="mailto: emil@rocketm.co" class="contact-link allow-select">
+                                emil@rocketm.co
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                            <a href="mailto: daniel@rocketm.co" class="contact-link allow-select">
+                                daniel@rocketm.co
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                            <a href="mailto: mladen@rocketm.co" class="contact-link allow-select">
+                                mladen@rocketm.co
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <!-- <ul class="social-list">
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-facebook"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-link">
+                                            <ion-icon name="logo-linkedIn"></ion-icon>
+                                        </a>
+                                    </li>
+                                </ul> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </article>
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module" src="./src/script.js"></script>
+    <script src="./src/form.js"></script>
+    <script src="./src/aos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./src/wormhole/index.js"></script>
+</body>
+
+</html>

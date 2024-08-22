@@ -1,0 +1,114 @@
+.about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    cursor: default;
+}
+
+.about-content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-images-blob {
+    width: 700px;
+    background-image: url('../../img/elements/blue-sky.png');
+    background-attachment: fixed;
+    background-size: 20%;
+}
+
+.about-planet-container {
+    position: absolute;
+    top: 0;
+}
+
+.about-planet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.1s ease-out;
+}
+
+#planet_1 {
+    top: 500px;
+    left: 35px;
+}
+
+#planet_2 {
+    top: 430px;
+    left: 405px;
+}
+
+#planet_3 {
+    top: 250px;
+    left: 590px;
+}
+
+#planet_4 {
+    top: 380px;
+    left: 70px;
+}
+
+#planet_5 {
+    top: 120px;
+    left: 240px;
+}
+
+#planet_6 {
+    top: 50px;
+    left: 0px;
+}
+
+.about-text-section {
+    max-width: 600px;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+.about-headline {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: normal;
+    color: #f2f2f2;
+}
+
+.about-subheadline {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #00bcd4;
+}
+
+.about-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ddd;
+    max-width: 600px;
+    border-left: 3px solid #00bcd4;
+    border-radius: 3px;
+    padding: 0 15px;
+    transition: 300ms !important;
+}
+
+.about-text:hover {
+    margin-left: 10px;
+}
