@@ -126,14 +126,37 @@
     transform: rotateY(180deg) translateY(-15px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 350px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1010px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 1360px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
