@@ -26,7 +26,7 @@ export function planetsRotationAnimation() {
 
 
         let speed = window.innerWidth <= 830 ? 0.007 : 0.005;
-        let radius = window.innerWidth <= 830 ? 0.5 : 15;
+        let radius = window.innerWidth <= 830 ? 5 : 15;
 
         // Calculate new positions for each planet
         let planet1 = document.getElementById('planet_1');

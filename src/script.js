@@ -7,6 +7,7 @@ import {
     planetsRotationAnimation,
     serviceCardsAnimation
 } from './animations.js';
+import { addDelayForHeroCta, serviceCardsFiltering, updateCtaButtonPosition } from './functionalities.js'
 
 const addEventOnElem = function (elem, type, callback) {
     if (elem.length > 1) {
@@ -21,16 +22,14 @@ const addEventOnElem = function (elem, type, callback) {
 header(addEventOnElem);
 accordion(addEventOnElem);
 
-// Hero cta delay
-document.getElementById('hero-cta').addEventListener('click', function () {
-    setTimeout(function () {
-        document.getElementById('about').scrollIntoView();
-    }, 800);
-});
+// Functionalities
+addDelayForHeroCta();
+serviceCardsFiltering();
+window.addEventListener('scroll', updateCtaButtonPosition);
+window.addEventListener('load', updateCtaButtonPosition);
 
 // Animations
 astronautMovement();
 rocketCtaAnimation();
 planetsRotationAnimation();
 serviceCardsAnimation();
-

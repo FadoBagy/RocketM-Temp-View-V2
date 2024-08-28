@@ -1,0 +1,107 @@
+export function addDelayForHeroCta() {
+    document.getElementById('hero-cta').addEventListener('click', function () {
+        setTimeout(function () {
+            document.getElementById('about').scrollIntoView();
+        }, 800);
+    });
+}
+
+export function updateCtaButtonPosition() {
+    const servicesSection = document.getElementById('services');
+    const ctaContainer = document.querySelector('.services-cta-container');
+    const sectionTop = servicesSection.offsetTop;
+    const sectionHeight = servicesSection.offsetHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const viewportHeight = window.innerHeight;
+
+    // Calculate the bottom of the section position
+    const sectionBottom = sectionTop + sectionHeight;
+
+    // Get the button's height for precise positioning
+    const ctaHeight = ctaContainer.offsetHeight;
+
+    // Calculate the distance from the top of the viewport to the bottom of the section
+    const distanceFromBottom = sectionBottom - (scrollTop + viewportHeight);
+
+    // When the viewport is within the section and the button hasn't reached the bottom of the section
+    if (scrollTop + viewportHeight >= sectionTop + 80 && distanceFromBottom > 0) {
+        ctaContainer.style.position = 'fixed';
+        ctaContainer.style.bottom = '5px';
+        ctaContainer.style.top = 'auto';
+    }
+    // When the viewport has scrolled past the bottom of the section, stop the button at the bottom
+    else if (distanceFromBottom <= 0) {
+        ctaContainer.style.position = 'absolute';
+        ctaContainer.style.top = `${sectionHeight - ctaHeight}px`;
+        ctaContainer.style.bottom = 'auto';
+    }
+    // Reset the button to its initial position if the section is above the viewport
+    else if (scrollTop + viewportHeight < sectionTop + 80) {
+        ctaContainer.style.position = 'absolute';
+        ctaContainer.style.top = '20px';
+        ctaContainer.style.bottom = 'auto';
+    }
+}
+
+export function serviceCardsFiltering() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    // Attach event listeners to the filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Check if the clicked button is already active
+            if (button.classList.contains('active')) {
+                return; // Do nothing if the filter is already selected
+            }
+
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            // Apply the filter with animations
+            const filter = button.getAttribute('data-filter');
+            applyFilter(filter);
+        });
+    });
+}
+
+function fadeOutAndHide(element, duration = 300) {
+    element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
+    element.style.opacity = 0;
+    element.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+        element.style.display = 'none';
+    }, duration);
+}
+
+function fadeInAndShow(element, duration = 300) {
+    element.style.display = 'block';
+    element.style.opacity = 0;
+    element.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+        element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
+        element.style.opacity = 1;
+        element.style.transform = 'translateY(0)';  // Move to the original position
+    }, 10);  // Small delay to ensure the transition occurs
+}
+
+function applyFilter(filter) {
+    const serviceItems = document.querySelectorAll('.service-item');
+    // First, fade out all items
+    serviceItems.forEach(item => {
+        fadeOutAndHide(item);
+    });
+
+    // After fade out is complete, fade in the matching items
+    setTimeout(() => {
+        serviceItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                fadeInAndShow(item);  // Fade-in and move-up effect for matching items
+            }
+        });
+        updateCtaButtonPosition(); // Update CTA btn position based on the amount of elements 
+    }, 300);  // Duration should match the fadeOutAndHide duration
+}
