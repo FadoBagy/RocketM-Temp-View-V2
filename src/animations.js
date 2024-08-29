@@ -57,13 +57,13 @@ export function serviceCardsAnimation() {
             if (card.classList.contains('active')) {
                 card.classList.remove('active');
             } else {
-                // // Remove 'active' class from all other cards
-                // document.querySelectorAll('.service-item .card').forEach(otherCard => {
-                //     if (otherCard !== card) {
-                //         otherCard.classList.remove('active');
-                //         otherCard.classList.remove('flipped'); // Ensure all other cards close
-                //     }
-                // });
+                // Remove 'active' class from all other cards
+                document.querySelectorAll('.service-item .card').forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('active');
+                        otherCard.classList.remove('flipped');
+                    }
+                });
                 card.classList.add('active');
             }
         });

@@ -1,9 +1,5 @@
 @import url('../variables.css');
 
-/*-----------------------------------*\
-    #HEADER
-  \*-----------------------------------*/
-
 .header .btn-outline {
     display: none;
 }

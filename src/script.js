@@ -1,13 +1,16 @@
 'use strict';
 import { header } from './header.js';
-import { accordion } from './accordion.js';
 import {
     astronautMovement,
     rocketCtaAnimation,
     planetsRotationAnimation,
     serviceCardsAnimation
 } from './animations.js';
-import { addDelayForHeroCta, serviceCardsFiltering, updateCtaButtonPosition } from './functionalities.js'
+import {
+    addDelayForHeroCta,
+    serviceCardsFiltering,
+    updateCtaButtonPosition
+} from './functionalities.js'
 
 const addEventOnElem = function (elem, type, callback) {
     if (elem.length > 1) {
@@ -20,7 +23,6 @@ const addEventOnElem = function (elem, type, callback) {
     }
 }
 header(addEventOnElem);
-accordion(addEventOnElem);
 
 // Functionalities
 addDelayForHeroCta();

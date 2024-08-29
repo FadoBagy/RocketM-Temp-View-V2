@@ -1,9 +1,5 @@
 @import url('../variables.css');
 
-/*-----------------------------------*\
-    #FOOTER
-  \*-----------------------------------*/
-
 .footer {
     background-color: black;
     color: var(--cultured);

@@ -17,7 +17,7 @@ export function header(addEventOnElem) {
     }
     addEventOnElem(navLinks, "click", closeNavbar);
 
-    /// header activer when scroll down
+    /// header active when scroll down
     const header = document.querySelector("[data-header]");
     const headerActive = function () {
         window.scrollY > 100 ? header.classList.add("active")
