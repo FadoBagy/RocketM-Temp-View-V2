@@ -69,3 +69,33 @@ export function serviceCardsAnimation() {
         });
     });
 }
+
+export function ufoEasterEggAnimation() {
+    let isAnimating = false;
+    document.querySelector('.planet-icon').addEventListener('click', function () {
+        const ufo = document.querySelector('.ufo-icon');
+
+        if (isAnimating) return; // Prevent clicks during animation
+
+        isAnimating = true;
+        ufo.style.display = 'block';
+
+        // Trigger reflow to ensure the opacity transition works
+        void ufo.offsetWidth; // This forces a reflow, allowing the transition to trigger
+
+        ufo.classList.add('revealed');
+
+        // After the animation ends, fade out the UFO and reset the state
+        ufo.addEventListener('animationend', function () {
+            ufo.classList.remove('revealed');
+            ufo.classList.add('hidden');
+
+            // Wait for the fade-out transition to complete before hiding the UFO
+            setTimeout(() => {
+                ufo.style.display = 'none';
+                ufo.classList.remove('hidden');
+                isAnimating = false;
+            }, 500); // Match this duration with the CSS transition time
+        }, { once: true });
+    });
+}

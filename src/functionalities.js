@@ -66,6 +66,37 @@ export function serviceCardsFiltering() {
     });
 }
 
+export function revealTextWithTypingEffect() {
+    document.querySelectorAll('.reveal-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const hiddenText = this.previousElementSibling;
+            const typingDots = hiddenText.previousElementSibling;
+            const fullText = hiddenText.getAttribute('data-text');
+            let charIndex = 0;
+
+            // Hide the button and show the typing dots
+            this.style.display = 'none';
+            typingDots.style.display = 'inline-block';
+
+            // Simulate typing delay before revealing text
+            setTimeout(() => {
+                typingDots.style.display = 'none';
+                hiddenText.style.display = 'inline';
+
+                const typeText = () => {
+                    if (charIndex < fullText.length) {
+                        hiddenText.textContent += fullText.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeText, 30); // Adjust typing speed here
+                    }
+                };
+
+                typeText();
+            }, 1500); // Duration of the typing dots animation before revealing text
+        });
+    });
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;

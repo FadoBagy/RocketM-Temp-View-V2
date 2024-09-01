@@ -4,12 +4,14 @@ import {
     astronautMovement,
     rocketCtaAnimation,
     planetsRotationAnimation,
-    serviceCardsAnimation
+    serviceCardsAnimation,
+    ufoEasterEggAnimation
 } from './animations.js';
 import {
     addDelayForHeroCta,
     serviceCardsFiltering,
-    updateCtaButtonPosition
+    updateCtaButtonPosition,
+    revealTextWithTypingEffect
 } from './functionalities.js'
 
 const addEventOnElem = function (elem, type, callback) {
@@ -29,9 +31,11 @@ addDelayForHeroCta();
 serviceCardsFiltering();
 window.addEventListener('scroll', updateCtaButtonPosition);
 window.addEventListener('load', updateCtaButtonPosition);
+revealTextWithTypingEffect();
 
 // Animations
 astronautMovement();
 rocketCtaAnimation();
 planetsRotationAnimation();
 serviceCardsAnimation();
+ufoEasterEggAnimation();
