@@ -14,9 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 4;
     background-color: black;
     transition: background-color 4s ease;
+    z-index: 100;
 }
 
 .header.active {
@@ -57,7 +57,7 @@
     padding: 30px 20px;
     visibility: hidden;
     transition: 0.25s var(--cubic-out);
-    z-index: 4;
+    z-index: 100;
 }
 
 .navbar.active {
