@@ -1,0 +1,235 @@
+.team {
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    cursor: default;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-header h3 {
+    color: #1e1e1e;
+    font-size: 2.5em;
+}
+
+.team-header p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.team-cards {
+    width: 100%;
+    background-image: url('../../img/elements/grey-sky.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    position: relative;
+    width: 250px;
+    height: 280px;
+    background: radial-gradient(circle at bottom, #1a1a1a, #e10531);
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.team-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #f2f2f241;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, #f2f2f22d, transparent);
+    z-index: 3;
+    overflow: hidden;
+}
+
+.team-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1a1a1acc 50%, transparent);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.team-card:hover::after {
+    opacity: 1;
+}
+
+.team-card:hover img {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    position: absolute;
+    bottom: 0;
+    left: -25px;
+    width: 300px;
+    z-index: 2;
+    transform: translateY(15px);
+    transition: transform 300ms ease-in-out;
+}
+
+.team-card h4,
+.team-card p,
+.team-card a {
+    position: relative;
+    color: #f2f2f2;
+    z-index: 4;
+}
+
+.team-card h4 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #f2f2f2;
+    padding-bottom: 0;
+    z-index: 4;
+    transition: bottom 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.team-card:hover h4 {
+    bottom: 55px;
+}
+
+.team-card .team-info-panel {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, #1a1a1a 10%, transparent);
+    color: #f2f2f2;
+    padding-bottom: 10px;
+    text-align: center;
+    z-index: 5;
+    transition: bottom 300ms ease-in-out;
+}
+
+.team-card .team-info-panel p {
+    font-size: 0.9em;
+}
+
+.team-card .team-info-panel a {
+    color: #e10531;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.team-card:hover .team-info-panel {
+    bottom: -5px;
+}
+
+.team-card.hover-effect::after {
+    opacity: 1;
+}
+
+.team-card.hover-effect h4 {
+    bottom: 50px;
+}
+
+.team-card.hover-effect .team-info-panel {
+    bottom: -5px;
+}
+
+.team-card.hover-effect img {
+    transform: translateY(-10px);
+}
+
+.team-card.hover-effect {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #f2f2f241;
+}
+
+@media (max-width: 1200px) {
+    .team-cards {
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .team-header h3 {
+        font-size: 2em;
+    }
+
+    .team-header p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 900px) {
+    .team-header {
+        padding: 20px;
+    }
+
+    .team-cards {
+        gap: 20px;
+    }
+
+    .team-card {
+        width: 220px;
+        height: 260px;
+    }
+
+    .team-card h4 {
+        font-size: 1.1em;
+    }
+
+    .team-card img {
+        width: 260px;
+        left: -20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team {
+        padding: 50px 0;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .team-header h3 {
+        font-size: 1.8em;
+    }
+
+    .team-header p {
+        font-size: 1em;
+    }
+}
