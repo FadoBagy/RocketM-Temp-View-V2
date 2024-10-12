@@ -26,6 +26,7 @@
 }
 
 .team-cards {
+    position: relative;
     width: 100%;
     background-image: url('../../img/elements/grey-sky.png');
     background-size: cover;
@@ -176,6 +177,44 @@
     box-shadow: 0 0 25px #f2f2f241;
 }
 
+#teamTelescope {
+    position: absolute;
+    left: 400px;
+    top: -80px;
+    width: 80px;
+}
+
+#teamPlanet {
+    position: absolute;
+    right: 400px;
+    top: -160px;
+    width: 75px;
+}
+
+@keyframes rotatePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#teamPlanet.rotate {
+    animation: rotatePlanet 600ms ease-in-out forwards;
+}
+
+@media (max-width: 1600px) {
+    #teamTelescope {
+        left: 200px;
+    }
+
+    #teamPlanet {
+        right: 200px;
+    }
+}
+
 @media (max-width: 1200px) {
     .team-cards {
         gap: 30px;
@@ -188,6 +227,17 @@
 
     .team-header p {
         font-size: 1.1em;
+    }
+
+    #teamTelescope {
+        left: 50px;
+        width: 70px;
+        top: -70px;
+    }
+
+    #teamPlanet {
+        right: 50px;
+        width: 65px;
     }
 }
 
@@ -202,6 +252,14 @@
 
     .team-card h4 {
         font-size: 1.1em;
+    }
+
+    #teamTelescope {
+        display: none;
+    }
+
+    #teamPlanet {
+        display: none;
     }
 }
 

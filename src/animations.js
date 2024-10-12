@@ -99,3 +99,22 @@ export function ufoEasterEggAnimation() {
         }, { once: true });
     });
 }
+
+export function planetEasterEggAnimation() {
+    document.addEventListener('DOMContentLoaded', function () {
+        let planet = document.getElementById('teamPlanet');
+        let isAnimating = false;
+
+        planet.addEventListener('mouseenter', function () {
+            if (!isAnimating) {
+                planet.classList.add('rotate');
+                isAnimating = true;
+            }
+        });
+
+        planet.addEventListener('animationend', function () {
+            planet.classList.remove('rotate');
+            isAnimating = false;
+        });
+    });
+}
