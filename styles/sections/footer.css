@@ -5,11 +5,22 @@
     color: var(--cultured);
 }
 
+.footer-top {
+    padding-bottom: 10px;
+}
+
 .footer-top .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer .logo {
@@ -84,12 +95,6 @@
     transition: var(--transition-1);
 }
 
-.footer-item:last-child {
-    margin-block-start: 25px;
-    padding-block-start: 25px;
-    border-block-start: 1px solid var(--granite-gray);
-}
-
 .social-link {
     font-size: 14px;
     border: 1px solid var(--granite-gray);
@@ -153,6 +158,12 @@
 .footer-text .newsletter-form button:hover {
     transition: 250ms;
     background-color: var(--rich-black-fogra-29-1);
+}
+
+.copyright {
+    text-align: center;
+    color: #666;
+    margin: 80px 0 0 0;
 }
 
 @media (max-width: 780px) {
