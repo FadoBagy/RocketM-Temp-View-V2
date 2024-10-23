@@ -125,6 +125,31 @@ export function teamCardsClickToggle() {
     });
 }
 
+export function scrollToSectionWithOffset() {
+    document.querySelectorAll('.navbar-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            // Customize the offset for each section if needed
+            let offset = 0;
+            if (targetId === 'services') {
+                offset = -80;
+            } else if (targetId === 'team') {
+                offset = -120;
+            }
+
+            // Scroll to the target element with offset
+            window.scrollTo({
+                top: targetElement.offsetTop + offset,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;

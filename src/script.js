@@ -13,7 +13,8 @@ import {
     serviceCardsFiltering,
     updateCtaButtonPosition,
     revealTextWithTypingEffect,
-    teamCardsClickToggle
+    teamCardsClickToggle,
+    scrollToSectionWithOffset
 } from './functionalities.js'
 
 const addEventOnElem = function (elem, type, callback) {
@@ -35,6 +36,7 @@ window.addEventListener('scroll', updateCtaButtonPosition);
 window.addEventListener('load', updateCtaButtonPosition);
 revealTextWithTypingEffect();
 teamCardsClickToggle();
+scrollToSectionWithOffset();
 
 // Animations
 astronautMovement();
