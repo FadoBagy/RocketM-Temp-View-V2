@@ -146,11 +146,11 @@
 
     .contact-form {
         width: 90%;
-        padding: 20px;
+        padding: 30px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
     .contact-header h3 {
         line-height: 40px;
     }
