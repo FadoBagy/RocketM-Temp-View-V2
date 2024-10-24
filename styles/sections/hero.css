@@ -49,6 +49,20 @@
     color: #666;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+
+        /* Safari-specific styles */
+        .hero-title {
+            color: #f2f2f2 !important;
+        }
+
+        .hero-text {
+            color: #cecece;
+        }
+    }
+}
+
 .hero .btn-group {
     margin-block-start: 40px;
 }
