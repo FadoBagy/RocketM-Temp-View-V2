@@ -150,6 +150,13 @@ export function scrollToSectionWithOffset() {
     });
 }
 
+export function applySafariStyles() {
+    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+        document.querySelector('.hero-title').style.color = '#f2f2f2';
+        document.querySelector('.hero-text').style.color = '#cecece';
+    }
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;
