@@ -58,9 +58,17 @@
         }
 
         .hero-text {
-            color: #cecece;
+            color: #cecece !important;
         }
     }
+}
+
+.hero-title::-webkit-text-fill-color {
+    color: #f2f2f2 !important;
+}
+
+.hero-text::-webkit-text-fill-color {
+    color: #cecece !important;
 }
 
 .hero .btn-group {
