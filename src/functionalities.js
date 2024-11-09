@@ -154,6 +154,7 @@ export function applySafariStyles() {
     if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
         document.querySelector('.hero-title').style.color = '#f2f2f2';
         document.querySelector('.hero-text').style.color = '#cecece';
+        document.querySelector('.blob').style.display = 'none';
     }
 }
 

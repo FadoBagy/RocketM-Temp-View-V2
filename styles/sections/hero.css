@@ -249,6 +249,10 @@
         padding: 25px 50px;
         border-radius: 10px;
     }
+
+    .hero-title {
+        color: #1e1e1e !important;
+    }
 }
 
 @media (max-width: 1740px) {
