@@ -253,6 +253,10 @@
     .hero-title {
         color: #1e1e1e !important;
     }
+
+    .hero-text {
+        color: #666 !important;
+    }
 }
 
 @media (max-width: 1740px) {
