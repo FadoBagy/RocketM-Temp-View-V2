@@ -1,0 +1,24 @@
+.tnc-section {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 130px;
+    padding: 20px 20px 100px 20px;
+}
+
+.tnc-section p {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .terms-and-conditions {
+        padding: 15px;
+    }
+
+    .terms-and-conditions h2 {
+        font-size: 28px;
+    }
+
+    .terms-and-conditions h3 {
+        font-size: 20px;
+    }
+}

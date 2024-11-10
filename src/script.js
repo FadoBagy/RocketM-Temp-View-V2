@@ -30,20 +30,23 @@ const addEventOnElem = function (elem, type, callback) {
 }
 header(addEventOnElem);
 
-// Functionalities
-addDelayForHeroCta();
-serviceCardsFiltering();
-window.addEventListener('scroll', updateCtaButtonPosition);
-window.addEventListener('load', updateCtaButtonPosition);
-revealTextWithTypingEffect();
-teamCardsClickToggle();
-scrollToSectionWithOffset();
-applySafariStyles();
+const section = document.querySelector('main section');
+if (!section.classList.contains('tnc-section') && !section.classList.contains('privacy-policy-section')) {
+    // Functionalities
+    addDelayForHeroCta();
+    serviceCardsFiltering();
+    window.addEventListener('scroll', updateCtaButtonPosition);
+    window.addEventListener('load', updateCtaButtonPosition);
+    revealTextWithTypingEffect();
+    teamCardsClickToggle();
+    scrollToSectionWithOffset();
+    applySafariStyles();
 
-// Animations
-astronautMovement();
-rocketCtaAnimation();
-planetsRotationAnimation();
-serviceCardsAnimation();
-ufoEasterEggAnimation();
-planetEasterEggAnimation();
+    // Animations
+    astronautMovement();
+    rocketCtaAnimation();
+    planetsRotationAnimation();
+    serviceCardsAnimation();
+    ufoEasterEggAnimation();
+    planetEasterEggAnimation();
+}
