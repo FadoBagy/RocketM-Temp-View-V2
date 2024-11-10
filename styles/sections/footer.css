@@ -198,3 +198,34 @@
         align-items: center;
     }
 }
+
+
+.footer-social-media {
+    border-top: 1px solid #333;
+    padding-top: 16px;
+}
+
+.social-footer-icon {
+    width: 25px;
+    transition: opacity 400ms;
+}
+
+.active-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.social-icon {
+    position: relative;
+}
+
+.social-icon:hover .default-icon {
+    opacity: 0;
+}
+
+.social-icon:hover .active-icon {
+    opacity: 1;
+}
