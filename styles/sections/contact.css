@@ -29,6 +29,7 @@
 .contact-header h3 {
     color: #1e1e1e;
     font-size: 2.5em;
+    margin-bottom: 5px;
 }
 
 .contact-header p {
@@ -36,24 +37,42 @@
     font-size: 1.2em;
 }
 
+.contact-form form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .form-group {
-    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
 
 .form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     margin-bottom: 8px;
-    color: #1e1e1e;
+    background: transparent;
+    font-size: 1em;
     font-weight: 500;
+    color: #1e1e1e;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 0;
+    transition: all 300ms ease-in-out;
 }
 
 .form-group input,
 .form-group textarea {
+    position: relative;
     padding: 10px;
     font-size: 1em;
+    background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
+    z-index: 1;
     transition: border-color 300ms;
 }
 
@@ -67,6 +86,24 @@
     min-height: 52px;
     max-height: 500px;
     resize: vertical;
+}
+
+/* Move label up and show it when the input has content */
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:not(:placeholder-shown)~label {
+    top: -25px;
+    font-size: 1em;
+    color: #666;
+    opacity: 1;
+}
+
+/* Maintain z-index during active states */
+.form-group input:focus~label,
+.form-group textarea:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:not(:placeholder-shown)~label {
+    z-index: 0;
+    /* Keep label behind even when active */
 }
 
 .submit-button {
@@ -92,7 +129,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .contact-info a {
