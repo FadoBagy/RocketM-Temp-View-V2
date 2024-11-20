@@ -167,3 +167,20 @@
         flex-direction: column;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.error-message {
+    font-size: 1em;
+    color: #e10531;
+    margin-left: 10px;
+}

@@ -156,6 +156,179 @@ export function applySafariStyles() {
     }
 }
 
+export function initializeFormSubmission() {
+    const form = document.getElementById('contact-form');
+
+    if (!form) {
+        console.error(`Form with ID "${'contact-form'}" not found.`);
+        return;
+    }
+
+    // Get form elements
+    const nameField = form.querySelector('#name');
+    const emailField = form.querySelector('#email');
+    const phoneField = form.querySelector('#phone');
+    const messageField = form.querySelector('#message');
+
+    form.addEventListener('submit', handleFormSubmit);
+
+    // Add input event listeners for real-time validation
+    nameField.addEventListener('input', validateName);
+    emailField.addEventListener('input', validateEmail);
+    phoneField.addEventListener('input', validatePhone);
+    messageField.addEventListener('input', validateMessage);
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        // Perform validation
+        if (!validateForm()) {
+            handleError('Моля, попълнете всички полета правилно.');
+            return;
+        }
+
+        disableForm(submitButton);
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        submitForm(data, submitButton);
+    }
+
+    function validateForm() {
+        let isValid = true;
+
+        if (!validateName()) isValid = false;
+        if (!validateEmail()) isValid = false;
+        if (!validatePhone()) isValid = false;
+        if (!validateMessage()) isValid = false;
+
+        return isValid;
+    }
+
+    function validateName() {
+        const value = nameField.value.trim();
+        const errorSpan = form.querySelector('#name-error');
+
+        if (value === '') {
+            nameField.classList.add('invalid');
+            nameField.classList.remove('valid');
+            errorSpan.textContent = 'Моля, въведете име.';
+            return false;
+        } else {
+            nameField.classList.remove('invalid');
+            nameField.classList.add('valid');
+            errorSpan.textContent = '';
+            return true;
+        }
+    }
+
+    function validateEmail() {
+        const value = emailField.value.trim();
+        const errorSpan = form.querySelector('#email-error');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(value)) {
+            emailField.classList.add('invalid');
+            emailField.classList.remove('valid');
+            errorSpan.textContent = 'Моля, въведете валиден имейл адрес.';
+            return false;
+        } else {
+            emailField.classList.remove('invalid');
+            emailField.classList.add('valid');
+            errorSpan.textContent = '';
+            return true;
+        }
+    }
+
+    function validatePhone() {
+        const value = phoneField.value.trim();
+        const errorSpan = form.querySelector('#phone-error');
+        const phonePattern = /^\+?\d{7,15}$/;
+
+        if (!phonePattern.test(value)) {
+            phoneField.classList.add('invalid');
+            phoneField.classList.remove('valid');
+            errorSpan.textContent = 'Моля, въведете валиден телефонен номер.';
+            return false;
+        } else {
+            phoneField.classList.remove('invalid');
+            phoneField.classList.add('valid');
+            errorSpan.textContent = '';
+            return true;
+        }
+    }
+
+    function validateMessage() {
+        const value = messageField.value.trim();
+        const errorSpan = form.querySelector('#message-error');
+
+        if (value === '') {
+            messageField.classList.add('invalid');
+            messageField.classList.remove('valid');
+            errorSpan.textContent = 'Моля, въведете съобщение.';
+            return false;
+        } else {
+            messageField.classList.remove('invalid');
+            messageField.classList.add('valid');
+            errorSpan.textContent = '';
+            return true;
+        }
+    }
+
+    function submitForm(data, submitButton) {
+        fetch('https://formspree.io/f/xjkvoejd', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    handleSuccess();
+                } else {
+                    handleError('Възникна проблем при изпращането на формата. Моля, проверете дали въведената информация е коректна.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                handleError('Възникна проблем с мрежата. Моля, опитайте пак по-късно.');
+            })
+            .finally(() => {
+                enableForm(submitButton);
+            });
+    }
+
+    function handleSuccess() {
+        alert('Формата беше изпратена успешно!');
+        form.reset();
+
+        // Remove 'valid' classes after reset
+        nameField.classList.remove('valid');
+        emailField.classList.remove('valid');
+        phoneField.classList.remove('valid');
+        messageField.classList.remove('valid');
+    }
+
+    function handleError(errorMessage) {
+        alert(errorMessage);
+    }
+
+    function disableForm(submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Изпращане...';
+    }
+
+    function enableForm(submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Изпрати';
+    }
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;

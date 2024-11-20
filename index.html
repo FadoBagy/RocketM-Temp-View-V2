@@ -782,22 +782,26 @@
                     </p>
                 </div>
 
-                <form action="#" method="post">
+                <form id="contact-form" novalidate>
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Име" required />
                         <label for="name">Име</label>
+                        <span class="error-message" id="name-error"></span>
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Имейл" required />
                         <label for="email">Имейл</label>
+                        <span class="error-message" id="email-error"></span>
                     </div>
                     <div class="form-group">
                         <input type="tel" id="phone" name="phone" placeholder="Телефонен номер" required />
                         <label for="phone">Телефонен номер</label>
+                        <span class="error-message" id="phone-error"></span>
                     </div>
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder="Съобщение" required></textarea>
                         <label for="message">Съобщение</label>
+                        <span class="error-message" id="message-error"></span>
                     </div>
                     <button type="submit" class="submit-button">Изпрати</button>
                 </form>

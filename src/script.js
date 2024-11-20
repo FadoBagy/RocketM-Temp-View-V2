@@ -15,7 +15,8 @@ import {
     revealTextWithTypingEffect,
     teamCardsClickToggle,
     scrollToSectionWithOffset,
-    applySafariStyles
+    applySafariStyles,
+    initializeFormSubmission
 } from './functionalities.js'
 
 const addEventOnElem = function (elem, type, callback) {
@@ -41,6 +42,7 @@ if (!section.classList.contains('tnc-section') && !section.classList.contains('p
     teamCardsClickToggle();
     scrollToSectionWithOffset();
     applySafariStyles();
+    initializeFormSubmission();
 
     // Animations
     astronautMovement();
