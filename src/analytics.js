@@ -116,3 +116,28 @@ export function setupContactFormFieldTracking() {
         });
     }
 }
+
+export function setupScrollDepthTracking() {
+    let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
+
+    const trackScrollDepth = () => {
+        const scrollDepth = Math.floor((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+
+        for (let depth in scrollTracked) {
+            if (!scrollTracked[depth] && scrollDepth >= depth) {
+                scrollTracked[depth] = true;
+
+                // Send event to Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll', {
+                        event_category: 'Scroll Depth',
+                        event_label: `${depth}%`,
+                        value: parseInt(depth, 10)
+                    });
+                }
+            }
+        }
+    };
+
+    window.addEventListener('scroll', trackScrollDepth);
+}

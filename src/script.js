@@ -24,7 +24,8 @@ import {
     setupHeroButtonTracking,
     setupServicesCTAButtonTracking,
     setupContactFormTracking,
-    setupContactFormFieldTracking
+    setupContactFormFieldTracking,
+    setupScrollDepthTracking
 } from './analytics.js';
 
 const addEventOnElem = function (elem, type, callback) {
@@ -74,4 +75,5 @@ if (!section.classList.contains('tnc-section') && !section.classList.contains('p
     setupServicesCTAButtonTracking();
     setupContactFormTracking();
     setupContactFormFieldTracking();
+    setupScrollDepthTracking();
 }
