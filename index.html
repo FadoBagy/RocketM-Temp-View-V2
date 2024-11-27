@@ -2,6 +2,8 @@
 <html lang="bg">
 
 <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="fcae95d0-562f-43db-828a-2dbe47fd58f0"
+        data-blockingmode="auto" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -51,22 +53,23 @@
                 </div>
                 <ul class="navbar-list">
                     <li>
-                        <a href="#home" id="nav-link" class="navbar-link" data-nav-link>Начало</a>
+                        <a href="#home" class="navbar-link" data-nav-link="home">Начало</a>
                     </li>
                     <li>
-                        <a href="#about" id="nav-link" class="navbar-link" data-nav-link>Ползи</a>
+                        <a href="#about" class="navbar-link" data-nav-link="about">Ползи</a>
                     </li>
                     <li>
-                        <a href="#services" id="nav-link" class="navbar-link" data-nav-link>Услуги</a>
+                        <a href="#services" class="navbar-link" data-nav-link="services">Услуги</a>
                     </li>
                     <li>
-                        <a href="#why-choose-us" id="nav-link" class="navbar-link" data-nav-link>Защо нас</a>
+                        <a href="#why-choose-us" class="navbar-link" data-nav-link="why-choose-us">Защо
+                            нас</a>
                     </li>
                     <li>
-                        <a href="#team" id="nav-link" class="navbar-link" data-nav-link>Екип</a>
+                        <a href="#team" class="navbar-link" data-nav-link="team">Екип</a>
                     </li>
                     <li>
-                        <a href="#contact" id="nav-link" class="navbar-link" data-nav-link>Контакти</a>
+                        <a href="#contact" class="navbar-link" data-nav-link="contact">Контакти</a>
                     </li>
                 </ul>
             </nav>
@@ -117,7 +120,7 @@
                         аудитория и да увеличите значително продажбите си
                     </p>
                     <div class="btn-group" data-aos="fade-right" data-aos-delay="300">
-                        <a id="hero-cta" class="btn btn-primary hero-cta">
+                        <a id="hero-cta" class="btn btn-primary hero-cta" data-action="hero-cta-click">
                             <img src="./img/rocket.webp" alt="Rocket">
                             <p>Научи повече</p>
                         </a>
@@ -218,7 +221,7 @@
             </div>
 
             <div class="services-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-item" data-category="web-development">
+                <div class="service-item" data-category="web-development" data-title="Уеб-разбработка">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/web-dev-icon.png" alt="Уеб-разбработка">
@@ -241,7 +244,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="social-media">
+                <div class="service-item" data-category="social-media" data-title="Управление на социални мрежи">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/smm-icon.png" alt="Управление на социални мрежи">
@@ -265,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="marketing">
+                <div class="service-item" data-category="marketing" data-title="Изготвяне на маркетинг стратегия">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/marketing-icon.png"
@@ -290,7 +293,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="branding">
+                <div class="service-item" data-category="branding" data-title="Графичен Дизайн">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/graphic-design-icon.png" alt="Графичен Дизайн">
@@ -314,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="email">
+                <div class="service-item" data-category="email" data-title="Имейл и SMS Маркетинг">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/email-sms-icon.png" alt="Имейл и SMS Маркетинг">
@@ -338,7 +341,8 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="web-development">
+                <div class="service-item" data-category="web-development"
+                    data-title="Поддръжка на уебсайтове и магазини">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/web-maintenance-icon.png"
@@ -362,7 +366,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="social-media">
+                <div class="service-item" data-category="social-media" data-title="Създаване на съдържание">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/content-creation-icon.png"
@@ -386,7 +390,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="social-media">
+                <div class="service-item" data-category="social-media" data-title="Изработка на снимки">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/image-creation-icon.png" alt="Изработка на снимки">
@@ -409,7 +413,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="social-media">
+                <div class="service-item" data-category="social-media" data-title="Изработка на видеа">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/video-creation-icon.png" alt="Изработка на видеа">
@@ -432,7 +436,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="social-media">
+                <div class="service-item" data-category="social-media" data-title="Изготвяне на план и постинг">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/schedule-icon.png"
@@ -456,7 +460,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="marketing">
+                <div class="service-item" data-category="marketing" data-title="Оптимизация на маркетинг стратегия">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/optimization-icon.png"
@@ -480,7 +484,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="marketing">
+                <div class="service-item" data-category="marketing" data-title="Оптимизация на Продажбите">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/sales-optimization-icon.png"
@@ -506,7 +510,7 @@
                     </div>
                 </div>
 
-                <div class="service-item" data-category="branding">
+                <div class="service-item" data-category="branding" data-title="Брандинг">
                     <div class="card">
                         <div class="card-front">
                             <img src="./img/elements/icons/services/branding-icon.png" alt="Брандинг">
@@ -533,7 +537,7 @@
             </div>
 
             <div class="services-cta-container" data-aos="fade-up" data-aos-delay="200">
-                <a href="#contact" class="services-cta-btn btn-primary">
+                <a href="#contact" class="services-cta-btn btn-primary" data-action="services-cta-click">
                     Свържи се
                 </a>
             </div>

@@ -18,6 +18,14 @@ import {
     applySafariStyles,
     initializeFormSubmission
 } from './functionalities.js'
+import {
+    setupNavigationTracking,
+    setupServiceCardTracking,
+    setupHeroButtonTracking,
+    setupServicesCTAButtonTracking,
+    setupContactFormTracking,
+    setupContactFormFieldTracking
+} from './analytics.js';
 
 const addEventOnElem = function (elem, type, callback) {
     if (elem.length > 1) {
@@ -51,4 +59,12 @@ if (!section.classList.contains('tnc-section') && !section.classList.contains('p
     serviceCardsAnimation();
     ufoEasterEggAnimation();
     planetEasterEggAnimation();
+
+    // Google Analytics
+    setupNavigationTracking();
+    setupServiceCardTracking();
+    setupHeroButtonTracking();
+    setupServicesCTAButtonTracking();
+    setupContactFormTracking();
+    setupContactFormFieldTracking();
 }
