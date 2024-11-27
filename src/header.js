@@ -1,28 +1,41 @@
 export function header(addEventOnElem) {
-    // navbar toggle
+    // Navbar toggle
     const navbar = document.querySelector("[data-navbar]");
-    const navToggler = document.querySelectorAll("[data-nav-toggler]");
+    const navTogglers = document.querySelectorAll("[data-nav-toggler]");
     const overlay = document.querySelector("[data-overlay]");
-    const toggleNavbar = function () {
-        navbar.classList.toggle("active");
-        overlay.classList.toggle("active");
-    }
-    addEventOnElem(navToggler, "click", toggleNavbar);
 
-    // close navbar when click on any navbar links
+    if (navbar && overlay && navTogglers.length > 0) {
+        const toggleNavbar = function () {
+            navbar.classList.toggle("active");
+            overlay.classList.toggle("active");
+        };
+        addEventOnElem(navTogglers, "click", toggleNavbar);
+    } else {
+        console.warn('Navbar or togglers not found!');
+    }
+
+    // Close navbar on navbar link click
     const navLinks = document.querySelectorAll("[data-nav-link]");
-    const closeNavbar = function () {
-        navbar.classList.remove("active");
-        overlay.classList.remove("active");
+    if (navbar && overlay && navLinks.length > 0) {
+        const closeNavbar = function () {
+            navbar.classList.remove("active");
+            overlay.classList.remove("active");
+        };
+        addEventOnElem(navLinks, "click", closeNavbar);
+    } else {
+        console.warn('Navbar links not found!');
     }
-    addEventOnElem(navLinks, "click", closeNavbar);
 
-    /// header active when scroll down
-    const header = document.querySelector("[data-header]");
-    const headerActive = function () {
-        window.scrollY > 100 ? header.classList.add("active")
-            : header.classList.remove("active");
-
+    // Header active on scroll
+    const headerElem = document.querySelector("[data-header]");
+    if (headerElem) {
+        const headerActive = function () {
+            window.scrollY > 100
+                ? headerElem.classList.add("active")
+                : headerElem.classList.remove("active");
+        };
+        addEventOnElem(window, "scroll", headerActive);
+    } else {
+        console.warn('Header element not found!');
     }
-    addEventOnElem(window, "scroll", headerActive);
 }

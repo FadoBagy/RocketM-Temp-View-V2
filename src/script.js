@@ -28,15 +28,22 @@ import {
 } from './analytics.js';
 
 const addEventOnElem = function (elem, type, callback) {
+    if (!elem) {
+        return;
+    }
+
     if (elem.length > 1) {
         for (let i = 0; i < elem.length; i++) {
-            elem[i].addEventListener(type, callback);
+            if (elem[i] instanceof HTMLElement || elem[i] === window) {
+                elem[i].addEventListener(type, callback);
+            }
+        }
+    } else {
+        if (elem instanceof HTMLElement || elem === window) {
+            elem.addEventListener(type, callback);
         }
     }
-    else {
-        elem.addEventListener(type, callback);
-    }
-}
+};
 header(addEventOnElem);
 
 const section = document.querySelector('main section');
