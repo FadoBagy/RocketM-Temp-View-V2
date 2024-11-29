@@ -147,6 +147,12 @@
     color: #e10531;
 }
 
+.error-message {
+    font-size: 1em;
+    color: #e10531;
+    margin-left: 10px;
+}
+
 @media (max-width: 600px) {
     .contact {
         padding: 150px 0;
@@ -166,21 +172,4 @@
     .contact-info {
         flex-direction: column;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.error-message {
-    font-size: 1em;
-    color: #e10531;
-    margin-left: 10px;
 }
