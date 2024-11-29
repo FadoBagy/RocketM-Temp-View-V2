@@ -1,4 +1,4 @@
-@import url(http://rocketm.co/styles/variables.css);
+@import url('../variables.css');
 
 .header .btn-outline {
     display: none
