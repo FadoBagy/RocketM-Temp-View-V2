@@ -10,11 +10,10 @@
         content="RocketM предлага цялостни услуги за дигитален маркетинг, включително SEO, PPC и маркетинг в социалните мрежи. Развийте бизнеса си с нашия екип от експерти.">
     <title>RocketM - Експертни Дигитални Маркетинг Услуги</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+
+    <link rel="preload" href="./styles/sections/hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./img/astronaut.webp" as="image" type="image/webp">
+
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/sections/header.css" />
     <link rel="stylesheet" href="./styles/sections/hero.css" />
@@ -25,6 +24,7 @@
     <link rel="stylesheet" href="./styles/sections/contact.css" />
     <link rel="stylesheet" href="./styles/sections/footer.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBS59DGFZM"></script>
     <script>
@@ -34,6 +34,7 @@
 
         gtag('config', 'G-KBS59DGFZM');
     </script>
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -159,7 +160,8 @@
         <section class="about" id="about">
             <div class="about-content">
                 <div class="about-images">
-                    <img src="./img/elements/blob-border.png" class="about-images-blob" alt="Space blob" loading="lazy">
+                    <img src="./img/elements/blob-border.webp" class="about-images-blob" alt="Space blob"
+                        loading="lazy">
                     <div class="about-planet-container" data-aos="fade-right" data-aos-delay="100">
                         <img src="./img/elements/planets/planet_1.png" id="planet_1" class="about-planet" alt="Planet1"
                             loading="lazy">
@@ -767,7 +769,7 @@
 
                 <div class="team-cards" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-card">
-                        <img src="./img/team/emo-team-no-bg.png" alt="Emil Team">
+                        <img src="./img/team/emo-team-no-bg.webp" alt="Emil Team">
                         <h4>Емил Моллов</h4>
                         <div class="team-info-panel">
                             <p>Creative and Marketing Director</p>
@@ -776,7 +778,7 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="./img/team/dani-team-no-bg.png" alt="Daniel Team" style="left: -30px;">
+                        <img src="./img/team/dani-team-no-bg.webp" alt="Daniel Team" style="left: -30px;">
                         <h4>Даниел Йорданов</h4>
                         <div class="team-info-panel">
                             <p>Project Manager and Sales Expert</p>
@@ -785,7 +787,7 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="./img/team/mladen-team-no-bg.png" alt="Mladen Team">
+                        <img src="./img/team/mladen-team-no-bg.webp" alt="Mladen Team">
                         <h4>Младен Недев</h4>
                         <div class="team-info-panel">
                             <p>IT Specialist</p>
@@ -794,7 +796,7 @@
                     </div>
 
                     <div class="team-card">
-                        <img src="./img/team/kris-team-no-bg.png" alt="Kristian Team">
+                        <img src="./img/team/kris-team-no-bg.webp" alt="Kristian Team">
                         <h4>Кристиан Пашов</h4>
                         <div class="team-info-panel">
                             <p>Digital Specialist</p>
