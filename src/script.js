@@ -16,7 +16,9 @@ import {
     teamCardsClickToggle,
     scrollToSectionWithOffset,
     applySafariStyles,
-    initializeFormSubmission
+    initializeFormSubmission,
+    handleBgTextMovement,
+    cookiesSetUp
 } from './functionalities.js'
 import {
     setupNavigationTracking,
@@ -50,6 +52,7 @@ header(addEventOnElem);
 const section = document.querySelector('main section');
 if (!section.classList.contains('tnc-section') && !section.classList.contains('privacy-policy-section')) {
     // Functionalities
+    cookiesSetUp();
     addDelayForHeroCta();
     serviceCardsFiltering();
     window.addEventListener('scroll', updateCtaButtonPosition);
@@ -59,6 +62,7 @@ if (!section.classList.contains('tnc-section') && !section.classList.contains('p
     scrollToSectionWithOffset();
     applySafariStyles();
     initializeFormSubmission();
+    handleBgTextMovement();
 
     // Animations
     astronautMovement();

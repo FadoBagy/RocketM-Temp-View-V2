@@ -329,6 +329,91 @@ export function initializeFormSubmission() {
     }
 }
 
+export function handleBgTextMovement() {
+    const bgText = document.querySelector(".bg-text");
+
+    function updateTextPosition() {
+        const scrollY = window.scrollY;
+        const movement = Math.min(scrollY / 5, 250); // Limits the movement
+        bgText.style.transform = `translateY(-${movement}px) rotate(-90deg)`;
+    }
+
+    updateTextPosition();
+    document.addEventListener("scroll", updateTextPosition);
+}
+
+export function cookiesSetUp() {
+    const banner = document.getElementById('cookie-banner');
+    const closeBtn = document.getElementById('cookie-close');
+    const allowBtn = document.getElementById('cookie-allow');
+    const denyBtn = document.getElementById('cookie-deny');
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function loadGoogleAnalytics() {
+        var gaScript = document.createElement('script');
+        gaScript.setAttribute('async', '');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KBS59DGFZM';
+        document.head.appendChild(gaScript);
+
+        gaScript.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-KBS59DGFZM');
+        };
+    }
+
+    // If cookie is already set, hide the banner
+    if (getCookie('cookieConsent')) {
+        banner.style.display = 'none';
+    }
+
+    // Check cookie on page load
+    const currentConsent = getCookie('cookieConsent');
+    if (currentConsent === 'all') {
+        loadGoogleAnalytics();
+    }
+
+    closeBtn.addEventListener('click', function () {
+        // Necessary cookies allowed
+        setCookie('cookieConsent', 'necessary', 365);
+        banner.style.display = 'none';
+    });
+
+    allowBtn.addEventListener('click', function () {
+        // All cookies allowed
+        setCookie('cookieConsent', 'all', 365);
+        banner.style.display = 'none';
+        loadGoogleAnalytics();
+    });
+
+    denyBtn.addEventListener('click', function () {
+        // Deny cookies (except strictly necessary)
+        setCookie('cookieConsent', 'deny', 365);
+        banner.style.display = 'none';
+    });
+}
+
+export function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;

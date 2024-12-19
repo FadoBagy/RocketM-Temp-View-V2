@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 100px 0;
+    padding-top: 100px;
     cursor: default;
 }
 
@@ -38,12 +38,13 @@
 .team-cards {
     position: relative;
     width: 100%;
-    padding: 50px;
+    padding: 150px 50px 120px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
+    z-index: 50;
 }
 
 .team-card {
@@ -185,14 +186,16 @@
 #teamTelescope {
     position: absolute;
     left: 400px;
-    top: -80px;
+    top: -50px;
     width: 80px;
+    transform: rotate(-30deg);
+    z-index: 51;
 }
 
 #teamPlanet {
     position: absolute;
     right: 400px;
-    top: -160px;
+    top: -140px;
     width: 75px;
 }
 
@@ -223,7 +226,6 @@
 @media (max-width: 1200px) {
     .team-cards {
         gap: 30px;
-        padding: 40px;
     }
 
     .team-header h3 {
@@ -247,6 +249,10 @@
 }
 
 @media (max-width: 900px) {
+    .team {
+        padding-top: 50px;
+    }
+
     .team-header {
         padding: 20px;
     }

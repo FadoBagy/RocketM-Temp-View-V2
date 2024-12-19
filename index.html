@@ -2,8 +2,6 @@
 <html lang="bg">
 
 <head>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="fcae95d0-562f-43db-828a-2dbe47fd58f0"
-        data-blockingmode="auto" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -22,25 +20,17 @@
     <link rel="preload" href="./img/astronaut.webp" as="image" type="image/webp">
 
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/cookie-banner.css" />
     <link rel="stylesheet" href="./styles/sections/header.css" />
     <link rel="stylesheet" href="./styles/sections/hero.css" />
     <link rel="stylesheet" href="./styles/sections/about.css" />
     <link rel="stylesheet" href="./styles/sections/services.css" />
+    <link rel="stylesheet" href="./styles/sections/partners.css" />
     <link rel="stylesheet" href="./styles/sections/why-choose-us.css" />
     <link rel="stylesheet" href="./styles/sections/team.css" />
     <link rel="stylesheet" href="./styles/sections/contact.css" />
     <link rel="stylesheet" href="./styles/sections/footer.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBS59DGFZM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-KBS59DGFZM');
-    </script>
 
     <script type="application/ld+json">
         {
@@ -167,6 +157,8 @@
 
         <section class="about" id="about">
             <div class="about-content">
+                <h2 class="bg-text">ROCKETM</h2>
+
                 <div class="about-images">
                     <img src="./img/elements/blob-border.webp" class="about-images-blob" alt="Space blob"
                         loading="lazy">
@@ -195,6 +187,7 @@
                             loading="lazy">
                     </div>
                 </div>
+
                 <div class="about-text-section">
                     <div>
                         <h2 class="about-headline" data-aos="fade-up" data-aos-delay="50">
@@ -270,10 +263,34 @@
                         </div>
                         <div class="card-back">
                             <h3>
-                                Изработка на уебсайтове и онлайн магазини
+                                Изработка на уебсайтове
                             </h3>
                             <p>
-                                Цялостни услуги за създаване на уебсайтове и онлайн
+                                Цялостни услуги за създаване на уебсайтове, включително консултации, дизайн и
+                                разработка.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-category="web-development" data-title="Изработка на онлайн магазин">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="./img/elements/icons/services/online-store-icon.png"
+                                alt="Изработка на онлайн магазин">
+                            <h3>
+                                Изработка на онлайн магазин
+                            </h3>
+                            <button class="flip-btn">
+                                <img src="./img/elements/icons/flip-icon.png" alt="Flip button">
+                            </button>
+                        </div>
+                        <div class="card-back">
+                            <h3>
+                                Изработка на онлайн магазин
+                            </h3>
+                            <p>
+                                Цялостни услуги за създаване на онлайн
                                 магазини, включително консултации, дизайн и разработка.
                             </p>
                         </div>
@@ -775,7 +792,9 @@
                 <img src="./img/elements/icons/team/planet.png" alt="Planet" id="teamPlanet" data-aos="fade-in"
                     data-aos-delay="150">
 
-                <div class="team-cards" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-cards">
+                    <div class="spacer layer-top-white"></div>
+
                     <div class="team-card">
                         <img src="./img/team/emo-team-no-bg.webp" alt="Emil Team">
                         <h4>Емил Моллов</h4>
@@ -810,6 +829,31 @@
                             <p>Digital Specialist</p>
                             <a href="mailto:office@rocketm.co">office@rocketm.co</a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="spacer layer-bott-white"></div>
+            </div>
+        </section>
+
+        <section class="partners" id="partners">
+            <div class="partners-container">
+                <h2 data-aos="fade-in" data-aos-delay="150">
+                    Нашите партньори
+                </h2>
+                <p data-aos="fade-in" data-aos-delay="150">
+                    Бизнеси, които ни се довериха за постигане на техните цели
+                </p>
+                <div class="partners-logos" id="partnersLogos" data-aos="fade-in" data-aos-delay="200">
+                    <div class="partners-logos-track">
+                        <img src="./img/partners/bling-logo.png" alt="Bling Logo">
+                        <img src="//pagashop.com/wp-content/uploads/2022/08/logo-paga2.svg" alt="Paga Logo">
+                        <img src="./img/partners/svezhora-logo.png" alt="Svezhora Logo">
+                        <img src="./img/partners/national-logo.png" alt="National Logo">
+                        <img src="./img/partners/bling-logo.png" alt="Bling Logo">
+                        <img src="//pagashop.com/wp-content/uploads/2022/08/logo-paga2.svg" alt="Paga Logo">
+                        <img src="./img/partners/svezhora-logo.png" alt="Svezhora Logo">
+                        <img src="./img/partners/national-logo.png" alt="National Logo">
                     </div>
                 </div>
             </div>
@@ -900,7 +944,7 @@
                             </a>
                         </li>
                         <li class="footer-item footer-social-media">
-                            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon">
+                            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
                                 <img src="./img/elements/icons/footer/facebook-icon.png" alt="Facebook"
                                     class="social-footer-icon default-icon">
                                 <img src="./img/elements/icons/footer/facebook-icon-active.png" alt="Facebook"
@@ -923,9 +967,18 @@
         </footer>
     </main>
 
+    <div id="cookie-banner">
+        <button id="cookie-close">X</button>
+        <p>Ние използваме бисквитки, за да оптимизираме нашия уебсайт и услуги.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-allow">Приемам всички</button>
+            <button id="cookie-deny">Отказ</button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
-    <script type="module" src="./src/script.js"></script>
     <script src="./src/aos.js"></script>
+    <script type="module" src="./src/script.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

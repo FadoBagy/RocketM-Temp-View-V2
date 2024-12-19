@@ -114,6 +114,17 @@
     margin-left: 10px;
 }
 
+.about .bg-text {
+    position: absolute;
+    top: 550px;
+    right: -300px;
+    color: #f2f2f2;
+    opacity: 5%;
+    font-size: 150px;
+    transform: rotate(-90deg);
+    transition: 0.3s ease-out;
+}
+
 @media (max-width: 349px) {
     .about-images {
         display: none;
@@ -161,6 +172,10 @@
         top: 25px;
         left: 0px;
     }
+
+    .about .bg-text {
+        top: 850px !important;
+    }
 }
 
 @media (max-width: 1380px) {
@@ -192,5 +207,9 @@
         justify-content: center;
         align-items: center;
         padding: 0 0 0 20px;
+    }
+
+    .about .bg-text {
+        top: 1250px;
     }
 }
