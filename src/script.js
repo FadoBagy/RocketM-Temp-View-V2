@@ -18,7 +18,8 @@ import {
     applySafariStyles,
     initializeFormSubmission,
     handleBgTextMovement,
-    cookiesSetUp
+    cookiesSetUp,
+    setDynamicYear
 } from './functionalities.js'
 import {
     setupNavigationTracking,
@@ -63,6 +64,7 @@ if (!section.classList.contains('tnc-section') && !section.classList.contains('p
     applySafariStyles();
     initializeFormSubmission();
     handleBgTextMovement();
+    setDynamicYear();
 
     // Animations
     astronautMovement();

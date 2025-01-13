@@ -414,6 +414,10 @@ export function getCookie(name) {
     return null;
 }
 
+export function setDynamicYear() {
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+}
+
 function fadeOutAndHide(element, duration = 300) {
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = 0;
